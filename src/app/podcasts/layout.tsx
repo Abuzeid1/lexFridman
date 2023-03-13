@@ -35,6 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               className=""
             >
               <Image
+                priority
                 src={youtubeLogo as string}
                 alt="Lex Fridman YouTube channel 
               "
@@ -44,6 +45,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <li>
             <Link target="_blank" href="https://www.youtube.com/lexclips">
               <Image
+                priority
                 src={lexClipsLogo}
                 alt="Lex Clips YouTube channel "
                 className="rounded-full"
@@ -56,6 +58,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               href="https://podcasts.apple.com/us/podcast/lex-fridman-podcast/id1434243584"
             >
               <Image
+                priority
                 src={podcatsLogo as string}
                 alt="Lex Fridman apple podcast "
               />
@@ -67,6 +70,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               href="https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL"
             >
               <Image
+                priority
                 src={spotifyLogo as string}
                 alt="Lex Fridman spotify Podcast"
               />
@@ -74,12 +78,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </li>
           <li>
             <Link target="_blank" href="https://lexfridman.com/feed/podcast/">
-              <Image src={rssLogo as string} alt="Lex Fridman RSS Feed" />
+              <Image
+                priority
+                src={rssLogo as string}
+                alt="Lex Fridman RSS Feed"
+              />
             </Link>
           </li>
           <li>
             <Link target="_blank" href="https://twitter.com/LexFridman">
               <Image
+                priority
                 src={twitterLogo as string}
                 alt="Lex Fridman twitter page "
               />
@@ -91,6 +100,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               href="https://www.linkedin.com/in/lexfridman/"
             >
               <Image
+                priority
                 src={linkedInLogo as string}
                 alt="Lex Fridman linkedIn profile "
               />
@@ -99,6 +109,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <li>
             <Link target="_blank" href="https://www.instagram.com/lexfridman/">
               <Image
+                priority
                 src={instagramLogo as string}
                 alt="Lex Fridman instagram page "
               />
@@ -107,6 +118,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <li>
             <Link target="_blank" href="https://www.facebook.com/lexfridman">
               <Image
+                priority
                 src={facebookLogo as string}
                 alt="Lex Fridman Facebook page "
               />
@@ -115,6 +127,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <li>
             <Link target="_blank" href="https://www.reddit.com/r/lexfridman/">
               <Image
+                priority
                 src={redditLogo as string}
                 alt="Lex Fridman reddit subreddit "
               />
@@ -122,7 +135,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </li>
           <li>
             <Link target="_blank" href="http://eepurl.com/dy1Obr">
-              <Image src={mailListLogo as string} alt="Lex Fridman mail list" />
+              <Image
+                priority
+                src={mailListLogo as string}
+                alt="Lex Fridman mail list"
+              />
             </Link>
           </li>
         </ul>
@@ -131,6 +148,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <li>
             <Link target="_blank" href="https://www.patreon.com/lexfridman">
               <Image
+                priority
                 src={paypalLogo as string}
                 alt="Support at us with PayPal"
               />
@@ -139,6 +157,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <li>
             <Link target="_blank" href="https://paypal.me/lexfridman">
               <Image
+                priority
                 src={patreonLogo as string}
                 alt="Support at us with Patreon"
               />
