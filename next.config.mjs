@@ -9,8 +9,12 @@
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
-  experimental : {
+  experimental: {
     appDir: true,
+  },
+  images: {
+    domains: ["lexfridman.com"],
+    formats: ["image/avif", "image/webp"],
   },
 
   /**
