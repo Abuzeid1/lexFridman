@@ -15,6 +15,7 @@ const config = {
   images: {
     domains: ["lexfridman.com"],
     formats: ["image/avif", "image/webp"],
+    dangerouslyAllowSVG: true,
   },
 
   /**
