@@ -86,7 +86,7 @@ const IconsList = ({
   return (
     <ul
       className={
-        "mx-auto flex w-[min(90%,40rem)] flex-wrap content-center justify-center gap-7 [&_img]:inline [&_img]:h-14 [&_img]:w-auto " +
+        "mx-auto flex w-11/12 max-w-xl flex-wrap content-center justify-center gap-7 [&_img]:inline [&_img]:h-14 [&_img]:w-auto " +
         (className || "")
       }
     >

@@ -15,7 +15,7 @@ export default function RootLayout({
       <body>
         <header>
           <nav>
-            <ul className="text-l mx-auto flex w-[min(100%,80rem)] list-none  rounded-b-3xl bg-gray-200  px-5  text-gray-700 [&>:nth-child(3)]:bg-gray-300 [&>:nth-child(4)]:ml-auto [&_a]:block [&_a]:p-5">
+            <ul className="text-l mx-auto flex  max-w-7xl list-none  rounded-b-3xl bg-gray-200  px-5  text-gray-700 [&>:nth-child(3)]:bg-gray-300  [&>:nth-child(4)]:ml-auto [&_a]:block [&_a]:p-5">
               {links.map(({ href, title }) => (
                 <li key={href}>
                   <Link href={href}>{title}</Link>

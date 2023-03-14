@@ -22,7 +22,7 @@ export default async function Body() {
 
 const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
   return (
-    <div className="mx-auto flex  w-[min(95%,80rem)] flex-wrap justify-center gap-6 text-center">
+    <div className="mx-auto flex w-11/12 max-w-7xl flex-wrap justify-center gap-6 text-center">
       {episodes.map((el) => (
         <div key={el.id} className="w-56">
           <Link href={el.youtubeUrl}>
