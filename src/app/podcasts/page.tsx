@@ -37,7 +37,6 @@ const EpisodeElement = (el: Episode) => {
           height="118"
           alt={el.title}
           className="h-auto w-full rounded-t-lg"
-          priority={el.id < 5 ? true : false}
         />
       </Link>
       <span className="mt-4 block text-sm text-gray-500">
