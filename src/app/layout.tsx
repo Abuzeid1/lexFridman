@@ -16,8 +16,10 @@ export default function RootLayout({
         <header>
           <nav>
             <ul className="text-l mx-auto flex w-[min(100%,80rem)] list-none  rounded-b-3xl bg-gray-200  px-5  text-gray-700 [&>:nth-child(3)]:bg-gray-300 [&>:nth-child(4)]:ml-auto [&_a]:block [&_a]:p-5">
-              {links.map((link) => (
-                <NavLink key={link.href} {...link} />
+              {links.map(({ href, title }) => (
+                <li key={href}>
+                  <Link href={href}>{title}</Link>
+                </li>
               ))}
             </ul>
           </nav>
@@ -27,13 +29,6 @@ export default function RootLayout({
     </html>
   );
 }
-const NavLink = ({ href, title }: { href: string; title: string }) => {
-  return (
-    <li>
-      <Link href={href}>{title}</Link>
-    </li>
-  );
-};
 
 const links = [
   { title: "Lex Fridman", href: "#" },

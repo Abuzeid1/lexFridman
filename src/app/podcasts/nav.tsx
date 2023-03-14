@@ -15,7 +15,6 @@ export default function Nav() {
 }
 
 const NavLink = ({ href, title }: { href: string; title: string }) => {
-  console.log(usePathname());
   return (
     <li>
       <Link className={usePathname() == href ? "bg-gray-300" : ""} href={href}>

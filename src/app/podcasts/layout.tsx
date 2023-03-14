@@ -26,7 +26,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </Paragraph>
 
         <SecondaryHeader>Follow Us</SecondaryHeader>
-        <IconsList icons={socialIcons} />
+        <IconsList
+          icons={socialIcons}
+          className="[&>:nth-child(2)_img]:rounded-full"
+        />
 
         <SecondaryHeader>Support Us</SecondaryHeader>
         <IconsList icons={supportIcons} />
@@ -68,30 +71,35 @@ const PrimaryHeader = ({
 const SecondaryHeader = ({ children }: { children: React.ReactNode }) => {
   return <h2 className="mt-14 mb-5 text-2xl text-gray-800"> {children}</h2>;
 };
+
 const Paragraph = ({ children }: { children: React.ReactNode }) => {
   return <p className="text-xl text-gray-700"> {children}</p>;
 };
 
-const IconsList = ({ icons }: { icons: iconData[] }) => {
+const IconsList = ({
+  icons,
+  className,
+}: {
+  icons: { href: string; iconSrc: StaticImageData }[];
+  className?: string;
+}) => {
   return (
-    <ul className="mx-auto flex w-[min(90%,40rem)] flex-wrap content-center justify-center gap-7 [&_img]:inline [&_img]:h-14 [&_img]:w-auto ">
-      {icons.map((icon) => (
-        <IconListItem key={icon.href} {...icon} />
+    <ul
+      className={
+        "mx-auto flex w-[min(90%,40rem)] flex-wrap content-center justify-center gap-7 [&_img]:inline [&_img]:h-14 [&_img]:w-auto " +
+        (className || "")
+      }
+    >
+      {icons.map(({ href, iconSrc }) => (
+        <li key={href}>
+          <Link target="_blank" href={href}>
+            <Image priority src={iconSrc} alt="Lex Fridman Facebook page " />
+          </Link>
+        </li>
       ))}
     </ul>
   );
 };
-
-const IconListItem = ({ href, iconSrc }: iconData) => {
-  return (
-    <li>
-      <Link target="_blank" href={href}>
-        <Image priority src={iconSrc} alt="Lex Fridman Facebook page " />
-      </Link>
-    </li>
-  );
-};
-type iconData = { href: string; iconSrc: StaticImageData };
 
 const supportIcons = [
   {
