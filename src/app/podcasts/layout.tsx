@@ -13,6 +13,7 @@ import mailListLogo from "./logos/mailingList.svg";
 import lexClipsLogo from "./logos/lexClips.jpg";
 import paypalLogo from "./logos/paypal.svg";
 import patreonLogo from "./logos/Patreon.svg";
+import Nav from "./nav";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -164,8 +165,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </li>
         </ul>
+        <h2 className="mb-10 mt-32 text-3xl text-gray-900">Recent Episodes</h2>
+
+        <Nav />
       </div>
+
       {children}
+      <div className="mx-auto my-32 max-w-4xl text-center">
+        <h3 className="py-2 text-4xl text-gray-900">Thank You</h3>
+        <p className=" text-xl text-gray-700">
+          I am forever grateful for the wisdom and love I&apos;ve encountered in
+          the meandering journey of doing these conversations. I can honestly
+          say that I can die a happy man having had the chance to pause and
+          witness so many moments of magic, at once fleeting and unforgettable.
+          Thank you.
+        </p>
+      </div>
     </>
   );
 }

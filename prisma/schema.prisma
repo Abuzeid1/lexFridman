@@ -16,10 +16,12 @@ model Example {
     updatedAt DateTime @updatedAt
 }
 
-model Eposide {
+model Episode {
     id            Int    @id @default(autoincrement())
     title         String
     imgUrl        String
     characterName String
     youtubeUrl    String
+
+    @@map("Eposide")
 }

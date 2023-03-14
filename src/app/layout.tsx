@@ -14,7 +14,7 @@ export default function RootLayout({
       <body>
         <header>
           <nav>
-            <ul className="text-l mx-auto flex w-[min(100%,80rem)] list-none gap-4 rounded-b-3xl bg-gray-200  py-4 px-8 text-gray-700 ">
+            <ul className="text-l mx-auto flex w-[min(100%,80rem)] list-none  rounded-b-3xl bg-gray-200  px-4 text-gray-700 [&_a]:block [&_a]:p-4">
               <li>
                 <Link href="#">Lex Fridman</Link>
               </li>
@@ -24,7 +24,7 @@ export default function RootLayout({
               </li>
 
               <li>
-                <Link href="/podcasts" className="">
+                <Link href="/podcasts" className="bg-gray-300 ">
                   Lex Fridman Podcast
                 </Link>
               </li>
