@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <ul className="mx-auto mb-16 flex w-max justify-center rounded-full bg-gray-200 text-xl [&_a]:block [&_a]:py-4 [&_a]:px-8">
+    <ul className="mx-auto mb-14 flex w-max justify-center rounded-full bg-gray-200 text-xl [&_a]:block [&_a]:py-4 [&_a]:px-8">
       <li>
         <Link
           className={

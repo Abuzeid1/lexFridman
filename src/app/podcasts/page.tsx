@@ -16,7 +16,7 @@ export default async function Body() {
       <div className="mx-auto flex  w-[min(95%,80rem)] flex-wrap justify-center gap-6 text-center">
         {episodes.map((el) => EpisodeElement(el))}
       </div>
-      <h2 className="mb-10 mt-14 text-3xl text-gray-900">Popular Episodes</h2>
+      <h2 className="mb-14 mt-14 text-3xl text-gray-900">Popular Episodes</h2>
 
       <div className="mx-auto flex  w-[min(95%,80rem)] flex-wrap justify-center gap-6 text-center">
         {popularEpisodesIds.map((id) => {
@@ -40,8 +40,10 @@ const EpisodeElement = (el: Episode) => {
           priority={el.id < 5 ? true : false}
         />
       </Link>
-      <p className=" mt-4 text-sm text-gray-500"> {el.characterName}</p>
-      <p className="  text-lg text-gray-700">{el.title}</p>
+      <span className="mt-4 block text-sm text-gray-500">
+        {el.characterName}
+      </span>
+      <span className="block  text-lg text-gray-700">{el.title}</span>
     </div>
   );
 };

@@ -14,7 +14,7 @@ export default function RootLayout({
       <body>
         <header>
           <nav>
-            <ul className="text-l mx-auto flex w-[min(100%,80rem)] list-none  rounded-b-3xl bg-gray-200  px-4 text-gray-700 [&_a]:block [&_a]:p-4">
+            <ul className="text-l mx-auto flex w-[min(100%,80rem)] list-none  rounded-b-3xl bg-gray-200  px-5  text-gray-700 [&_a]:block [&_a]:p-5">
               <li>
                 <Link href="#">Lex Fridman</Link>
               </li>

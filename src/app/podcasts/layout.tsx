@@ -19,16 +19,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div className="text-center font-serif">
-        <h1 className="mt-20 py-2 text-4xl text-gray-900">
-          Lex Fridman Podcast
-        </h1>
+        <h1 className="mt-28 text-4xl text-gray-900">Lex Fridman Podcast</h1>
         <p className=" text-xl text-gray-700">
           Conversations about the nature of intelligence, consciousness, love,
           and power.
         </p>
 
-        <h2 className=" mt-20 mb-8 text-2xl text-gray-800">Follow Us</h2>
-        <ul className="mx-auto flex w-[min(90%,43rem)] flex-wrap content-center justify-center gap-8 [&_img]:inline [&_img]:h-16 [&_img]:w-auto ">
+        <h2 className=" mt-14  mb-5 text-2xl text-gray-800">Follow Us</h2>
+        <ul className="mx-auto flex w-[min(90%,40rem)] flex-wrap content-center justify-center gap-7 [&_img]:inline [&_img]:h-14 [&_img]:w-auto ">
           <li>
             <Link
               target="_blank"
@@ -144,8 +142,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </li>
         </ul>
-        <h3 className="mt-20 mb-8 text-2xl text-gray-800"> Support Us</h3>
-        <ul className="mx-auto flex w-[min(90%,43rem)] flex-wrap content-center justify-center gap-8 [&_img]:inline [&_img]:h-16 [&_img]:w-auto ">
+        <h3 className="mt-14 mb-5 text-2xl text-gray-800"> Support Us</h3>
+        <ul className="mx-auto flex w-[min(90%,43rem)] flex-wrap content-center justify-center gap-7 [&_img]:inline [&_img]:h-14 [&_img]:w-auto ">
           <li>
             <Link target="_blank" href="https://www.patreon.com/lexfridman">
               <Image
@@ -165,14 +163,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </li>
         </ul>
-        <h2 className="mb-10 mt-32 text-3xl text-gray-900">Recent Episodes</h2>
+        <h3 className="mb-5 mt-28 text-3xl text-gray-900">Episodes</h3>
 
         <Nav />
       </div>
 
       {children}
-      <div className="mx-auto my-32 max-w-4xl text-center">
-        <h3 className="py-2 text-4xl text-gray-900">Thank You</h3>
+      <div className="mx-auto my-28 max-w-4xl text-center">
+        <h4 className="py-2 text-4xl text-gray-900">Thank You</h4>
         <p className=" text-xl text-gray-700">
           I am forever grateful for the wisdom and love I&apos;ve encountered in
           the meandering journey of doing these conversations. I can honestly
