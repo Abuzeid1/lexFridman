@@ -40,9 +40,11 @@ const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
               className="h-auto w-full rounded-t-lg"
             />
           </Link>
-          <span className="mt-4 block text-sm text-gray-500">
-            {el.characterName}
-          </span>
+          <Link href={"/podcasts/" + encodeURIComponent(el.characterName)}>
+            <span className="mt-4 block text-sm text-gray-500">
+              {el.characterName}
+            </span>
+          </Link>
           <span className="block text-lg text-gray-700">{el.title}</span>
         </li>
       ))}
