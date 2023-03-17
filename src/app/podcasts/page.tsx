@@ -12,8 +12,9 @@ export default async function Body() {
   return (
     <div className="text-center">
       <EpisodesList episodes={episodes} />
-
-      <h2 className="mb-14 mt-14 text-3xl text-gray-900">Popular Episodes</h2>
+      <h2 className="mb-7 mt-14 font-serif text-3xl font-bold text-gray-900">
+        Popular Episodes
+      </h2>
       {/* @ts-expect-error Server Component */}
       <PopularEpisodes />
     </div>

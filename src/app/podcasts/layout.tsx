@@ -18,8 +18,8 @@ import Nav from "./nav";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div className="text-center font-serif">
-        <PrimaryHeader className="mt-28">Lex Fridman Podcast</PrimaryHeader>
+      <section>
+        <PrimaryHeader>Lex Fridman Podcast</PrimaryHeader>
         <Paragraph>
           Conversations about the nature of intelligence, consciousness, love,
           and power.
@@ -33,14 +33,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         <SecondaryHeader>Support Us</SecondaryHeader>
         <IconsList icons={supportIcons} />
+      </section>
 
-        <h3 className="mb-5 mt-28 text-3xl text-gray-900">Episodes</h3>
-
+      <section>
+        <h3 className="mb-5 font-serif text-3xl font-bold text-gray-900">
+          Episodes
+        </h3>
         <Nav />
-      </div>
+        {children}
+      </section>
 
-      {children}
-      <div className="mx-auto my-28 max-w-4xl text-center">
+      <section className="mx-auto max-w-4xl ">
         <PrimaryHeader>Thank You</PrimaryHeader>
         <Paragraph>
           I am forever grateful for the wisdom and love I&apos;ve encountered in
@@ -49,10 +52,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           witness so many moments of magic, at once fleeting and unforgettable.
           Thank you.
         </Paragraph>
-      </div>
+      </section>
     </>
   );
 }
+
+export const metadata = {
+  title: "Lex podcasts",
+};
 
 const PrimaryHeader = ({
   children,
@@ -62,14 +69,18 @@ const PrimaryHeader = ({
   className?: string;
 }) => {
   return (
-    <h1 className={"text-4xl text-gray-900 " + (className || "")}>
+    <h1
+      className={"mb-3 font-serif text-5xl text-gray-900" + (className || "")}
+    >
       {children}
     </h1>
   );
 };
 
 const SecondaryHeader = ({ children }: { children: React.ReactNode }) => {
-  return <h2 className="mt-14 mb-5 text-2xl text-gray-800"> {children}</h2>;
+  return (
+    <h2 className="mt-14 mb-5 font-sans text-3xl text-gray-800"> {children}</h2>
+  );
 };
 
 const Paragraph = ({ children }: { children: React.ReactNode }) => {

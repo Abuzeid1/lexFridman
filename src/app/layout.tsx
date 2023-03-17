@@ -9,9 +9,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <title>Lex Fridman</title>
-      </head>
       <body>
         <header>
           <nav>
@@ -24,11 +21,15 @@ export default function RootLayout({
             </ul>
           </nav>
         </header>
-        <main>{children}</main>
+        <main className="my-36 grid gap-y-36 text-center">{children}</main>
       </body>
     </html>
   );
 }
+
+export const metadata = {
+  title: "Lex Fridman",
+};
 
 const links = [
   { title: "Lex Fridman", href: "#" },
