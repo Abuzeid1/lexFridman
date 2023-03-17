@@ -2,20 +2,12 @@ import { prisma } from "server/db";
 import Image from "next/image";
 import Link from "next/link";
 import { Episode } from "@prisma/client";
-import PopularEpisodes from "./popular/page";
 
 export default function Body() {
   return (
     <div className="text-center">
       {/* @ts-expect-error Server Component */}
-      <RecentEpisodes limit={5} />
-
-      <h2 className="mb-7 mt-14 font-serif text-3xl font-bold text-gray-900">
-        Popular Episodes
-      </h2>
-
-      {/* @ts-expect-error Server Component */}
-      <PopularEpisodes />
+      <RecentEpisodes limit={60} />
     </div>
   );
 }
