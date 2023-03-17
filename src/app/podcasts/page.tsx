@@ -4,23 +4,28 @@ import Link from "next/link";
 import { Episode } from "@prisma/client";
 import PopularEpisodes from "./popular/page";
 
-export default async function Body() {
-  const episodes = await prisma.episode.findMany({
-    orderBy: { id: "asc" },
-    take: 5,
-  });
+export default function Body() {
   return (
     <div className="text-center">
-      <EpisodesList episodes={episodes} />
+      {/* @ts-expect-error Server Component */}
+      <RecentEpisodes limit={5} />
+
       <h2 className="mb-7 mt-14 font-serif text-3xl font-bold text-gray-900">
         Popular Episodes
       </h2>
+
       {/* @ts-expect-error Server Component */}
       <PopularEpisodes />
     </div>
   );
 }
-
+const RecentEpisodes = async ({ limit }: { limit?: number }) => {
+  const recentEpisodes = await prisma.episode.findMany({
+    orderBy: { id: "asc" },
+    take: limit,
+  });
+  return <EpisodesList episodes={recentEpisodes} />;
+};
 const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
   return (
     <div className="mx-auto flex w-11/12 max-w-7xl flex-wrap justify-center gap-6 text-center">
@@ -45,4 +50,4 @@ const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
   );
 };
 
-export { EpisodesList };
+export { EpisodesList, RecentEpisodes };

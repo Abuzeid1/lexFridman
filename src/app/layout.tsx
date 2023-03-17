@@ -1,6 +1,5 @@
 import "./globals.css";
 import Link from "next/link";
-import Nav from "./podcasts/nav";
 
 export default function RootLayout({
   children,
@@ -9,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-50">
         <header>
           <nav>
             <ul className="text-l mx-auto flex  max-w-7xl list-none  rounded-b-3xl bg-gray-200  px-5  text-gray-700 [&>:nth-child(3)]:bg-gray-300  [&>:nth-child(4)]:ml-auto [&_a]:block [&_a]:p-5">

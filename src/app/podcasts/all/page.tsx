@@ -1,7 +1,10 @@
-import { prisma } from "server/db";
-import { EpisodesList } from "../page";
+import { RecentEpisodes } from "../page";
 
-export default async function Body() {
-  const episodes = await prisma.episode.findMany({ orderBy: { id: "asc" } });
-  return <EpisodesList episodes={episodes} />;
+export default function Body() {
+  return (
+    <>
+      {/* @ts-expect-error Server Component */}
+      <RecentEpisodes />
+    </>
+  );
 }
