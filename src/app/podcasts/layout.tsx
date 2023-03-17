@@ -25,13 +25,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           and power.
         </Paragraph>
 
-        <SecondaryHeader>Follow Us</SecondaryHeader>
+        <SecondaryHeader className="mt-14 mb-6">Follow Us</SecondaryHeader>
         <IconsList
           icons={socialIcons}
           className="[&>:nth-child(2)_img]:rounded-full"
         />
 
-        <SecondaryHeader>Support Us</SecondaryHeader>
+        <SecondaryHeader className="mt-14 mb-6">Support Us</SecondaryHeader>
         <IconsList icons={supportIcons} />
       </section>
 
@@ -77,9 +77,17 @@ const PrimaryHeader = ({
   );
 };
 
-const SecondaryHeader = ({ children }: { children: React.ReactNode }) => {
+const SecondaryHeader = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <h2 className="mt-14 mb-5 font-sans text-3xl text-gray-800"> {children}</h2>
+    <h2 className={"text-3xl text-gray-800 " + (className || "")}>
+      {children}
+    </h2>
   );
 };
 
@@ -168,3 +176,4 @@ const socialIcons = [
     iconSrc: mailListLogo as StaticImageData,
   },
 ];
+export { SecondaryHeader };

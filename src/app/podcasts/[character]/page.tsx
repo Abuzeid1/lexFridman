@@ -1,4 +1,5 @@
 import { prisma } from "server/db";
+import { SecondaryHeader } from "../layout";
 import { EpisodesList } from "../page";
 import PopularEpisodes from "../popular/page";
 
@@ -11,20 +12,20 @@ export default async function Page({ params }: { params: params }) {
     },
   });
   return (
-    <>
+    <div className="scroll-mt-56">
       {episodes.length > 0 ? (
         <EpisodesList episodes={episodes} />
       ) : (
-        <h1>Not Found</h1>
+        <SecondaryHeader className="my-32 font-sans">Not found</SecondaryHeader>
       )}
 
-      <h2 className="mb-7 mt-14 font-serif text-3xl font-bold text-gray-900">
+      <SecondaryHeader className="mb-7 mt-14 font-serif font-bold">
         Popular Episodes
-      </h2>
+      </SecondaryHeader>
 
       {/* @ts-expect-error Server Component */}
       <PopularEpisodes />
-    </>
+    </div>
   );
 }
 
