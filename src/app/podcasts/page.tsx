@@ -28,9 +28,9 @@ const RecentEpisodes = async ({ limit }: { limit?: number }) => {
 };
 const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
   return (
-    <div className="mx-auto flex w-11/12 max-w-7xl flex-wrap justify-center gap-6 text-center">
+    <ul className="mx-auto flex w-11/12 max-w-7xl flex-wrap justify-center gap-6 ">
       {episodes.map((el) => (
-        <div key={el.id} className="w-56">
+        <li key={el.id} className="w-56">
           <Link href={el.youtubeUrl}>
             <Image
               src={el.imgUrl}
@@ -44,9 +44,9 @@ const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
             {el.characterName}
           </span>
           <span className="block text-lg text-gray-700">{el.title}</span>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
