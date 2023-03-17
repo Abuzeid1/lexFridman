@@ -124,47 +124,47 @@ const supportIcons = [
 ];
 const socialIcons = [
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://www.youtube.com/@lexfridman/videos",
     iconSrc: youtubeLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://www.youtube.com/lexclips",
     iconSrc: lexClipsLogo,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://podcasts.apple.com/us/podcast/lex-fridman-podcast/id1434243584",
     iconSrc: podcatsLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL",
     iconSrc: spotifyLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://lexfridman.com/feed/podcast/",
     iconSrc: rssLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://twitter.com/LexFridman",
     iconSrc: twitterLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://www.linkedin.com/in/lexfridman/",
     iconSrc: linkedInLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://www.instagram.com/lexfridman/",
     iconSrc: instagramLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://www.facebook.com/lexfridman",
     iconSrc: facebookLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "https://www.reddit.com/r/lexfridman/",
     iconSrc: redditLogo as StaticImageData,
   },
   {
-    href: "https://paypal.me/lexfridman",
+    href: "http://eepurl.com/dy1Obr",
     iconSrc: mailListLogo as StaticImageData,
   },
 ];

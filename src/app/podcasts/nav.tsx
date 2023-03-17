@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <ul className="mx-auto mb-14 flex w-max justify-center overflow-hidden rounded-full bg-gray-200 text-xl [&_a]:block [&_a]:py-4 [&_a]:px-8">
       {links.map((link) => (
-        <NavLink key={link.href} {...link} />
+        <NavLink key={link.title} {...link} />
       ))}
     </ul>
   );
