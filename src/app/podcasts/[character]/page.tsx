@@ -19,7 +19,7 @@ export default async function Page({ params }: { params: params }) {
         <SecondaryHeader className="my-32 font-sans">Not found</SecondaryHeader>
       )}
 
-      <SecondaryHeader className="mb-7 mt-14 font-serif font-bold">
+      <SecondaryHeader className="mb-12  mt-24 font-serif font-bold">
         Popular Episodes
       </SecondaryHeader>
 

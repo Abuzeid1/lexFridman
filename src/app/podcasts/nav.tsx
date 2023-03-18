@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <ul className="mx-auto mb-14 flex w-max justify-center overflow-hidden rounded-full bg-gray-200 text-xl [&_a]:block [&_a]:py-4 [&_a]:px-8">
+    <ul className="mx-auto mb-14 flex w-max justify-center overflow-hidden rounded-full bg-gray-200 text-xl ">
       {links.map((link) => (
         <NavLink key={link.title} {...link} />
       ))}
@@ -17,7 +17,12 @@ export default function Nav() {
 const NavLink = ({ href, title }: { href: string; title: string }) => {
   return (
     <li>
-      <Link className={usePathname() == href ? "bg-gray-300" : ""} href={href}>
+      <Link
+        className={
+          "block py-4 px-8 " + (usePathname() == href ? "bg-gray-300" : "")
+        }
+        href={href}
+      >
         {title}
       </Link>
     </li>

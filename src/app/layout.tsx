@@ -11,10 +11,12 @@ export default function RootLayout({
       <body className="bg-gray-50">
         <header>
           <nav>
-            <ul className="text-l mx-auto flex  max-w-7xl list-none  rounded-b-3xl bg-gray-200  px-5  text-gray-700 [&>:nth-child(3)]:bg-gray-300  [&>:nth-child(4)]:ml-auto [&_a]:block [&_a]:p-5">
+            <ul className="mx-auto flex max-w-7xl rounded-b-3xl bg-gray-200  text-lg text-gray-700  [&>:nth-child(3)]:bg-gray-300 [&>:nth-child(4)]:ml-auto">
               {links.map(({ href, title }) => (
                 <li key={title}>
-                  <Link href={href}>{title}</Link>
+                  <Link href={href} className="block py-4 px-6">
+                    {title}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -33,7 +35,7 @@ export const metadata = {
 const links = [
   { title: "Lex Fridman", href: "#" },
   { title: "Deep Learning", href: "#" },
-  { title: "Lex Fridman Podcast", href: "/podcasts" },
+  { title: "Podcast", href: "/podcasts" },
   { title: "YouTube", href: "https://www.youtube.com/@lexfridman/" },
   { title: "Twitter", href: "https://twitter.com/lexfridman/" },
 ];

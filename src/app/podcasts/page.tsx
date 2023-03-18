@@ -5,7 +5,7 @@ import { Episode } from "@prisma/client";
 
 export default function Body() {
   return (
-    <div className="text-center">
+    <div>
       {/* @ts-expect-error Server Component */}
       <RecentEpisodes limit={60} />
     </div>
@@ -20,7 +20,7 @@ const RecentEpisodes = async ({ limit }: { limit?: number }) => {
 };
 const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
   return (
-    <ul className="mx-auto flex w-11/12 max-w-7xl flex-wrap justify-center gap-6 ">
+    <ul className="mx-auto flex w-11/12 max-w-7xl flex-wrap justify-center gap-x-4 gap-y-10 rounded-2xl bg-gray-50 py-20 px-10 shadow-2xl shadow-gray-600 ">
       {episodes.map((el) => (
         <li key={el.id} className="w-56">
           <Link href={el.youtubeUrl}>
@@ -29,7 +29,7 @@ const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
               width="210"
               height="118"
               alt={el.title}
-              className="h-auto w-full rounded-t-lg"
+              className="w-full rounded-t-lg"
             />
           </Link>
           <Link href={"/podcasts/" + encodeURIComponent(el.characterName)}>
@@ -37,7 +37,7 @@ const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
               {el.characterName}
             </span>
           </Link>
-          <span className="block text-lg text-gray-700">{el.title}</span>
+          <span className="text-lg text-gray-700">{el.title}</span>
         </li>
       ))}
     </ul>

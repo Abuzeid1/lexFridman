@@ -26,10 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </Paragraph>
 
         <SecondaryHeader className="mt-14 mb-6">Follow Us</SecondaryHeader>
-        <IconsList
-          icons={socialIcons}
-          className="[&>:nth-child(2)_img]:rounded-full"
-        />
+        <IconsList icons={socialIcons} />
 
         <SecondaryHeader className="mt-14 mb-6">Support Us</SecondaryHeader>
         <IconsList icons={supportIcons} />
@@ -61,20 +58,8 @@ export const metadata = {
   title: "Lex podcasts",
 };
 
-const PrimaryHeader = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <h1
-      className={"mb-3 font-serif text-5xl text-gray-900" + (className || "")}
-    >
-      {children}
-    </h1>
-  );
+const PrimaryHeader = ({ children }: { children: React.ReactNode }) => {
+  return <h1 className="mb-3 font-serif text-5xl text-gray-900">{children}</h1>;
 };
 
 const SecondaryHeader = ({
@@ -97,22 +82,23 @@ const Paragraph = ({ children }: { children: React.ReactNode }) => {
 
 const IconsList = ({
   icons,
-  className,
 }: {
   icons: { href: string; iconSrc: StaticImageData }[];
-  className?: string;
 }) => {
   return (
-    <ul
-      className={
-        "mx-auto flex w-11/12 max-w-xl flex-wrap content-center justify-center gap-7 [&_img]:inline [&_img]:h-14 [&_img]:w-auto " +
-        (className || "")
-      }
-    >
+    <ul className="mx-auto flex max-w-lg flex-wrap  justify-center gap-x-5 gap-y-10 ">
       {icons.map(({ href, iconSrc }) => (
         <li key={href}>
           <Link target="_blank" href={href}>
-            <Image priority src={iconSrc} alt="Lex Fridman Facebook page " />
+            <Image
+              priority
+              src={iconSrc}
+              alt={href}
+              className={
+                "h-14 w-auto " +
+                (iconSrc === lexClipsLogo ? "rounded-full" : "")
+              }
+            />
           </Link>
         </li>
       ))}
