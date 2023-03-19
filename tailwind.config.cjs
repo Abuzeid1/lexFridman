@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.tsx"],
   theme: {
     extend: {},
+  },
+  experimental: {
+    optimizeUniversalDefaults: true,
   },
   plugins: [],
 };
