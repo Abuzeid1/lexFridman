@@ -40,6 +40,7 @@ export default function RootLayout({
 
 export const metadata = {
   title: "Lex Fridman",
+  description: "an optimized version of lexfidman.com/podcasts",
 };
 
 const links = [
