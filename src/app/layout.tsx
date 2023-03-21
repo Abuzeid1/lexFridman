@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   children,
@@ -31,6 +32,7 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="my-36 grid gap-y-36 text-center">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
@@ -41,8 +43,8 @@ export const metadata = {
 };
 
 const links = [
-  { title: "Lex Fridman", href: "#" },
-  { title: "Deep Learning", href: "#" },
+  { title: "Lex Fridman", href: "/podcasts" },
+  { title: "Deep Learning", href: "/podcasts" },
   { title: "Podcast", href: "/podcasts" },
   { title: "YouTube", href: "https://www.youtube.com/@lexfridman/" },
   { title: "Twitter", href: "https://twitter.com/lexfridman/" },
