@@ -19,12 +19,12 @@ export default async function Page({ params }: { params: params }) {
   );
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<params[]> {
   return (
     await prisma.episode.findMany({ select: { characterName: true } })
-  ).map((el) => {
-    character: decodeURIComponent(el.characterName);
-  });
+  ).map((el) => ({
+    character: decodeURIComponent(el.characterName),
+  }));
 }
 
 export function generateMetadata({ params }: { params: params }) {
