@@ -20,7 +20,7 @@ const RecentEpisodes = async ({ limit }: { limit?: number }) => {
 };
 const EpisodesList = ({ episodes }: { episodes: Episode[] }) => {
   return (
-    <ul className="mx-auto flex w-11/12 max-w-7xl flex-wrap justify-center gap-x-4 gap-y-10 rounded-2xl py-20 px-10 shadow-2xl shadow-gray-400 ">
+    <ul className="mx-auto flex w-9/12 max-w-7xl flex-wrap justify-center gap-x-4 gap-y-10 rounded-2xl py-20 px-10 shadow-2xl shadow-gray-400 ">
       {episodes.map((el) => (
         <li key={el.id} className="w-56">
           <Link href={el.youtubeUrl}>
