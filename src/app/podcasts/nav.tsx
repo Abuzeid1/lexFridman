@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <ul className="mx-auto mb-14 flex w-max justify-center overflow-hidden rounded-full bg-gray-200 text-xl ">
+    <ul className="mx-auto mb-14 flex w-max justify-center overflow-hidden rounded-2xl bg-gray-200 text-xl max-sm:flex-col sm:rounded-full ">
       {links.map((link) => (
         <NavLink key={link.title} {...link} />
       ))}
