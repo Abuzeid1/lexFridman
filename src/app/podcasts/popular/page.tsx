@@ -1,5 +1,5 @@
+import { type Episode } from "@prisma/client";
 import { prisma } from "server/db";
-import { Episode } from "@prisma/client";
 import { EpisodesList } from "../page";
 
 export default async function PopularEpisodes() {

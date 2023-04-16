@@ -1,6 +1,6 @@
-import "./globals.css";
-import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
+import Link from "next/link";
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -18,7 +18,7 @@ export default function RootLayout({
                   key={title}
                   className={`${index > 0 ? "max-sm:hidden" : ""}`}
                 >
-                  <Link href={href} className="block py-4 px-6">
+                  <Link href={href} className="block px-6 py-4">
                     {title}
                   </Link>
                 </li>

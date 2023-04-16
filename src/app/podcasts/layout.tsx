@@ -1,18 +1,18 @@
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
-import youtubeLogo from "./logos/youtube.svg";
-import facebookLogo from "./logos/facebook.svg";
-import twitterLogo from "./logos/twitter.svg";
-import instagramLogo from "./logos/instagram.svg";
-import redditLogo from "./logos/reddit.svg";
-import linkedInLogo from "./logos/linkedIn.svg";
-import podcatsLogo from "./logos/podcast.svg";
-import spotifyLogo from "./logos/spotify.svg";
-import rssLogo from "./logos/rss.svg";
-import mailListLogo from "./logos/mailingList.svg";
-import lexClipsLogo from "./logos/lexClips.jpg";
-import paypalLogo from "./logos/paypal.svg";
 import patreonLogo from "./logos/Patreon.svg";
+import facebookLogo from "./logos/facebook.svg";
+import instagramLogo from "./logos/instagram.svg";
+import lexClipsLogo from "./logos/lexClips.jpg";
+import linkedInLogo from "./logos/linkedIn.svg";
+import mailListLogo from "./logos/mailingList.svg";
+import paypalLogo from "./logos/paypal.svg";
+import podcatsLogo from "./logos/podcast.svg";
+import redditLogo from "./logos/reddit.svg";
+import rssLogo from "./logos/rss.svg";
+import spotifyLogo from "./logos/spotify.svg";
+import twitterLogo from "./logos/twitter.svg";
+import youtubeLogo from "./logos/youtube.svg";
 import Nav from "./nav";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -25,10 +25,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           and power.
         </Paragraph>
 
-        <SecondaryHeader className="mt-14 mb-6">Follow Us</SecondaryHeader>
+        <SecondaryHeader className="mb-6 mt-14">Follow Us</SecondaryHeader>
         <IconsList icons={socialIcons} />
 
-        <SecondaryHeader className="mt-14 mb-6">Support Us</SecondaryHeader>
+        <SecondaryHeader className="mb-6 mt-14">Support Us</SecondaryHeader>
         <IconsList icons={supportIcons} />
       </section>
 
@@ -58,9 +58,9 @@ export const metadata = {
   title: "Lex podcasts",
 };
 
-const PrimaryHeader = ({ children }: { children: React.ReactNode }) => {
-  return <h1 className="mb-3 font-serif text-5xl text-gray-900">{children}</h1>;
-};
+const PrimaryHeader = ({ children }: { children: React.ReactNode }) => (
+  <h1 className="mb-3 font-serif text-5xl text-gray-900">{children}</h1>
+);
 
 const SecondaryHeader = ({
   children,
@@ -68,43 +68,36 @@ const SecondaryHeader = ({
 }: {
   children: React.ReactNode;
   className?: string;
-}) => {
-  return (
-    <h2 className={"text-3xl text-gray-800 " + (className || "")}>
-      {children}
-    </h2>
-  );
-};
+}) => (
+  <h2 className={"text-3xl text-gray-800 " + (className || "")}>{children}</h2>
+);
 
-const Paragraph = ({ children }: { children: React.ReactNode }) => {
-  return <p className="text-xl text-gray-700"> {children}</p>;
-};
+const Paragraph = ({ children }: { children: React.ReactNode }) => (
+  <p className="text-xl text-gray-700"> {children}</p>
+);
 
 const IconsList = ({
   icons,
 }: {
   icons: { href: string; iconSrc: StaticImageData }[];
-}) => {
-  return (
-    <ul className="mx-auto flex max-w-lg flex-wrap  justify-center gap-x-5 gap-y-10 ">
-      {icons.map(({ href, iconSrc }) => (
-        <li key={href}>
-          <Link target="_blank" href={href}>
-            <Image
-              priority
-              src={iconSrc}
-              alt={href}
-              className={
-                "h-14 w-auto " +
-                (iconSrc === lexClipsLogo ? "rounded-full" : "")
-              }
-            />
-          </Link>
-        </li>
-      ))}
-    </ul>
-  );
-};
+}) => (
+  <ul className="mx-auto flex max-w-lg flex-wrap  justify-center gap-x-5 gap-y-10 ">
+    {icons.map(({ href, iconSrc }) => (
+      <li key={href}>
+        <Link target="_blank" href={href}>
+          <Image
+            priority
+            src={iconSrc}
+            alt={href}
+            className={
+              "h-14 w-auto " + (iconSrc === lexClipsLogo ? "rounded-full" : "")
+            }
+          />
+        </Link>
+      </li>
+    ))}
+  </ul>
+);
 
 const supportIcons = [
   {

@@ -14,20 +14,18 @@ export default function Nav() {
   );
 }
 
-const NavLink = ({ href, title }: { href: string; title: string }) => {
-  return (
-    <li>
-      <Link
-        className={
-          "block py-4 px-8 " + (usePathname() == href ? "bg-gray-300" : "")
-        }
-        href={href}
-      >
-        {title}
-      </Link>
-    </li>
-  );
-};
+const NavLink = ({ href, title }: { href: string; title: string }) => (
+  <li>
+    <Link
+      className={
+        "block px-8 py-4 " + (usePathname() == href ? "bg-gray-300" : "")
+      }
+      href={href}
+    >
+      {title}
+    </Link>
+  </li>
+);
 
 const links = [
   { href: "/podcasts", title: "Show Recent" },
