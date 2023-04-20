@@ -6,7 +6,6 @@ import { prisma } from "server/db";
 export default function Body() {
   return (
     <div>
-      {/* @ts-expect-error Server Component */}
       <RecentEpisodes limit={60} />
     </div>
   );

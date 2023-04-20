@@ -9,7 +9,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         Popular Episodes
       </SecondaryHeader>
 
-      {/* @ts-expect-error Server Component */}
       <PopularEpisodes />
     </div>
   );
